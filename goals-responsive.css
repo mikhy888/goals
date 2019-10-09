@@ -1,11 +1,11 @@
 /*col-lg*/
 @media (max-width: 1200px){
-	.nopadding {padding:0px;}
+
 }
 
-
-.for-desktop {display: block;}
-.for-mobile {display: none;}
+.logo img {max-width: 135px;}
+.for-desktop, .in-desktop {display: block !important;;}
+.for-mobile, .in-mobile {display: none !important;;}
 
 
 /*col-md*/
@@ -135,8 +135,10 @@ transition: all .3s ease;
 
 
 /* styles for header change */
-.for-desktop {display:none;}
-.for-mobile {display: block;}
+.for-desktop,
+.in-desktop {display:none !important;}
+.for-mobile,
+.in-mobile {display: block !important;;}
 .profile-button-wrapper a.btn.options-btn {right:55px !important;}
 .logo {display: none;}
 .container-fluid {background: #fff;}
@@ -150,6 +152,7 @@ a.btn.options-btn img {width: 23px;}
 .search-purple {padding: 0px;padding-top: 7px;}
 .pro-wrapper {padding-bottom: 14px;padding-top: 18px;}
 .my-progress {margin-top: 0px;}
+.search-purple .date {text-align: left;padding-left: 15px;}
 
 
 
