@@ -59,8 +59,8 @@
               <nav class="navbar navbar-default menu-navigation for-mobile">
                 <a href="" class="small-logo"><img src="images/small-logo.png" alt=""></a>
                 <div class="profile-button-wrapper">
-                  <a class="btn options-btn" data-toggle="collapse" href="#collapseExample"> <img src="images/user.png"
-                      class="img-responsive" alt="">
+                  <a class="btn options-btn user-detail-opener" data-toggle="collapse" href="#collapseExample"> <img
+                      src="images/user.png" class="img-responsive" alt="">
 
                   </a>
                   <div class="navbar-header mob-hamburger">
@@ -441,7 +441,7 @@
                       </div>
                     </div>
                   </div>
-                  <a class="btn options-btn" data-toggle="collapse" href="#collapseExample"> <i
+                  <a class="btn options-btn close-sidebar" data-toggle="collapse" href="#collapseExample"> <i
                       class="glyphicon glyphicon-remove"></i></a>
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <div class="dropdown acc-drop row">
@@ -648,8 +648,21 @@ afterClose: function(){
         $('.for-desktop').empty();
       }
     }
+
+    /* removing logo in mobile wen opened sidebar */
+    var remove_logo = function () {
+      $(".user-detail-opener").click(function () {
+        $(".small-logo").fadeOut();
+      });
+      $(".close-sidebar").click(function () {
+        $(".small-logo").fadeIn();
+      });
+    }
+
+
     $(document).ready(function () {
       removeId();
+      remove_logo();
     });
 
     $(window).resize(function () {
