@@ -30,7 +30,7 @@
         <div class="row display">
           <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="row">
-              <div class="logo"> <img src="images/communitti-logo.png" class=" " alt="communitty logo"> </div>
+              <div class="logo"> <img src="images/small-logo.png" class=" " alt="communitty logo"> </div>
               <nav class="navbar navbar-default menu-navigation for-desktop">
                 <a class="btn options-btn" data-toggle="collapse" href="#collapseExample"> <img src="images/profile.jpg"
                     alt=""> </a>
@@ -59,8 +59,8 @@
               <nav class="navbar navbar-default menu-navigation for-mobile">
                 <a href="" class="small-logo"><img src="images/small-logo.png" alt=""></a>
                 <div class="profile-button-wrapper">
-                  <a class="btn options-btn user-detail-opener" data-toggle="collapse" href="#collapseExample"> <img
-                      src="images/user.png" class="img-responsive" alt="">
+                  <a class="btn options-btn" data-toggle="collapse" href="#collapseExample"> <img src="images/user.png"
+                      class="img-responsive" alt="">
 
                   </a>
                   <div class="navbar-header mob-hamburger">
@@ -433,13 +433,15 @@
               <div class="h-cover">
                 <div class="row pro-wrapper purple-side">
                   <div class="col-md-8 col-sm-8 col-xs-8 p-wrapper">
-                    <div class="search-purple">
-                      <div class="date">Monday, 15th Jan 2018</div>
+                    <div class="p-img in-desktop"> <img src="images/profile.jpg" alt=""></div>
+                    <div class="p-name in-desktop"> Kristin Taylor </div>
+                    <div class="in-mobile">
+                      <div class="search-purple">
+                        <div class="date">Monday, 15th Jan 2018</div>
+                      </div>
                     </div>
-                    <!-- <div class="p-img"> <img src="images/profile.jpg" alt=""></div>
-                    <div class="p-name"> Kristin Taylor </div> -->
                   </div>
-                  <a class="btn options-btn close-sidebar" data-toggle="collapse" href="#collapseExample"> <i
+                  <a class="btn options-btn" data-toggle="collapse" href="#collapseExample"> <i
                       class="glyphicon glyphicon-remove"></i></a>
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <div class="dropdown acc-drop row">
@@ -454,9 +456,9 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="search-purple">
+                <div class="search-purple in-desktop">
                   <div class="date">Monday, 15th Jan 2018</div>
-                </div> -->
+                </div>
                 <div class="head-right">
                   <h2> @ professional </h2>
                   <div class="dropdown head-drop row">
@@ -639,8 +641,6 @@ afterClose: function(){
 
 
   <script>
-
-    /* removing multiple nav */
     var removeId = function () {
       if ($(window).width() > 768) {
         $('.for-mobile').empty();
@@ -648,20 +648,8 @@ afterClose: function(){
         $('.for-desktop').empty();
       }
     }
-
-    /* removing logo in mobile wen opened sidebar */
-    var remove_logo = function () {
-      $(".user-detail-opener").click(function () {
-        $(".small-logo").fadeOut();
-      });
-      $(".close-sidebar").click(function () {
-        $(".small-logo").fadeIn();
-      });
-    }
-
     $(document).ready(function () {
       removeId();
-      remove_logo();
     });
 
     $(window).resize(function () {
