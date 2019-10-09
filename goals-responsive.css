@@ -3,9 +3,10 @@
 
 }
 
-.logo img {max-width: 135px;}
-.for-desktop, .in-desktop {display: block !important;;}
-.for-mobile, .in-mobile {display: none !important;;}
+.logo{padding-top: 20px;max-width: 135px;padding-bottom: 20px;height: 121px;}
+.logo img {max-width: 100%;}
+.for-desktop, .in-desktop {display: block !important;}
+.for-mobile, .in-mobile {display: none !important;}
 
 
 /*col-md*/
